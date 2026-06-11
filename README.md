@@ -1,36 +1,283 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div dir="rtl">
 
-## Getting Started
+# 🤖 راهنمای پروژه دستیارهای هوشمند
 
-First, run the development server:
+خوش‌آمدید!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+این پروژه با Next.js 15, TypeScript و TailwindCSS توسعه داده شده و هدف آن نمایش لیستی از دستیارهای هوشمند و تعامل با آن‌ها در قالب یک رابط چت مدرن و سبک است.
+
+---
+
+# 🚀تکنولوژی‌های استفاده شده
+
+- Next.js 15 (App Router)
+- TypeScript
+- TailwindCSS
+- Lucide React Icons
+
+---
+
+# 📂 ساختار پروژه
+
+<div dir="ltr">
+
+```
+src/
+├── app/
+│ ├── layout.tsx
+│ ├── page.tsx
+│ └── globals.css
+│
+├── components/
+│ ├── assistant/
+│ │ ├── AssistantCard.tsx
+│ │ ├── AssistantGrid.tsx
+│ │ ├── AssistantModal.tsx
+│ │ ├── AssistantReviewCard.tsx
+│ │ ├── CategoryTabs.tsx
+│ │ ├── SearchBar.tsx
+│ │ └── SphereFadeWrapper.tsx
+│ │
+│ └── ui/
+│ └── Container.tsx
+│
+├── data/
+│ └── assistants.ts
+│
+├── types/
+│ └── assistant.ts
+│
+└── lib/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 📌 توضیح بخش‌ها
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+پوشه| توضیح
+app| صفحات اصلی پروژه
+components| کامپوننت‌های رابط کاربری
+data| داده‌های موقت دستیارها
+types| تایپ‌های TypeScript
+lib| توابع و ابزارهای کمکی
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# 🧩 کامپوننت‌های اصلی
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**AssistantCard**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+نمایش اطلاعات هر دستیار شامل:
 
-## Deploy on Vercel
+- آیکن
+- عنوان
+- امتیاز
+- توضیحات
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**AssistantGrid**
+
+مسئول:
+
+- نمایش لیست کارت‌ها
+- چینش دو ستونه
+- مدیریت افکت Sphere هنگام اسکرول
+
+---
+
+**CategoryTabs**
+
+نمایش دسته‌بندی‌ها:
+
+- همه
+- تکنولوژی
+- طبیعت
+- درسی
+- سرگرمی
+
+دارای اسکرول افقی و حالت Active.
+
+---
+
+**SearchBar**
+
+فیلتر کردن دستیارها بر اساس عنوان.
+
+---
+
+**AssistantModal**
+
+مودال گفت‌وگو با دستیار.
+
+امکانات:
+
+- نمایش اطلاعات دستیار
+- نمایش پیام‌های کاربر
+- نمایش پیام‌های سرور
+- نمایش کارت امتیازدهی
+- بستن با کلیک خارج مودال
+- بستن با دکمه ضربدر
+- بستن با Gesture اسکرول
+
+---
+
+**AssistantReviewCard**
+
+نمایش:
+
+- تعداد کاربران
+- سطح هوش
+- امتیاز
+- ثبت نظر
+
+---
+
+**SphereFadeWrapper**
+
+مسئول ایجاد:
+
+- Fade بالا
+- Fade پایین
+- اسکرول لیست
+- افکت چرخش کارت‌ها
+
+---
+
+# 🎨 افکت‌های رابط کاربری
+
+**Sphere Scroll Effect**
+
+در هنگام اسکرول:
+
+- کارت‌های نزدیک مرکز طبیعی نمایش داده می‌شوند.
+- کارت‌های بالا و پایین:
+  - کوچک‌تر می‌شوند.
+  - کمی می‌چرخند.
+  - شفاف‌تر می‌شوند.
+
+هدف ایجاد حس حرکت کارت‌ها روی سطح یک کره است.
+
+---
+
+**Modal Animation**
+
+باز شدن مودال:
+
+- Fade In
+- Slide Up
+
+بسته شدن مودال:
+
+- Fade Out
+- Slide Down
+
+---
+
+**Tab Animation**
+
+در هنگام تغییر تب:
+
+- کارت‌ها به صورت Stagger نمایش داده می‌شوند.
+- هر کارت با تأخیر کوتاه ظاهر می‌شود.
+
+---
+
+# 📱 طراحی Responsive
+
+پروژه برای:
+
+- Mobile
+- Tablet
+- Desktop
+
+طراحی شده و تمامی کامپوننت‌ها واکنش‌گرا هستند.
+
+---
+
+# 📏 قوانین توسعه
+
+نام‌گذاری فایل‌ها
+
+تمام فایل‌ها:
+
+PascalCase.tsx
+
+**مثال:**
+
+AssistantCard.tsx
+AssistantModal.tsx
+CategoryTabs.tsx
+
+---
+
+Types
+
+تمام تایپ‌ها در پوشه:
+
+src/types
+
+قرار می‌گیرند.
+
+**مثال:**
+
+export interface Assistant {
+id: number;
+title: string;
+description: string;
+rating: number;
+}
+
+---
+
+Data
+
+تا قبل از اتصال API:
+
+src/data/assistants.ts
+
+منبع داده پروژه است.
+
+---
+
+# 🔮 برنامه توسعه آینده
+
+- اتصال به API
+- ذخیره تاریخچه گفتگو
+- استریم پاسخ‌ها
+- احراز هویت کاربران
+- دسته‌بندی پویا
+- جستجوی سمت سرور
+- امتیازدهی واقعی کاربران
+- ایجاد لینک برای استفاده شخصی
+
+---
+
+# ▶️ اجرای پروژه
+
+**نصب پکیج‌ها:**
+
+npm install
+
+**اجرای پروژه:**
+
+npm run dev
+
+**Build:**
+
+npm run build
+
+**Start:**
+
+npm run start
+
+---
+
+# 👨‍💻 نکات مهم
+
+- از **TypeScript** استفاده شده است.
+- تمامی استایل‌ها با **TailwindCSS** پیاده‌سازی شده‌اند.
+- انیمیشن‌ها سبک طراحی شده‌اند تا روی دستگاه‌های **ضعیف** نیز عملکرد مناسبی داشته باشند.
+- از کتابخانه‌های سنگین انیمیشن استفاده **نشده** است.
+
+</div>

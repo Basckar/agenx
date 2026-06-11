@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #2a2a2a;
+  color: white;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/public/Peyda-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    font-family: "Peyda";
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-primary: #8a71f0;
+  --color-secondary: ;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #111114;
+  --color-states-error: #5b2f2f;
+  --color-states-success: #19a409;
+  --color-shade-1: #5a01de;
+  --color-concession: #ffe355;
+
+  --text-displays-display: 56px;
+  --text-headers-text-h1: 44px;
+  --text-headers-text-h2: 40px;
+  --text-headers-text-h3: 32px;
+  --text-headers-text-h4: 24px;
+  --text-headers-text-h5: 20px;
+  --text-body-body-3: 18px;
+  --text-body-body: 24px;
+  --text-body-body-2: 20px;
+  --text-body-body-4: 16px;
+  --text-body-body-5: 14px;
+  --text-button-btn: 18px;
+  --text-button-btn-2: 16px;
+  --text-button-btn-3: 14px;
+  --text-button-btn4: 14px;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.btn-glass {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+  border-radius: 9999px; /* rounded-full */
+  font-size: 1rem; /* text-3xl */
+  line-height: 2.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.29); /* border border-white */
+  background-color: rgba(255, 255, 255, 0.03); /* bg-white/3 */
+  padding: 0.5rem 2rem; /* py-4 px-8 */
+  backdrop-filter: blur(24px); /* backdrop-blur-xl */
+  -webkit-backdrop-filter: blur(24px);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1); /* transition */
+}
+.btn-glass:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* hover:bg-white/15 */
+}
+/* -------------------------------- */ /* MODAL */ /* -------------------------------- */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+@keyframes modalOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+.modal-in {
+  animation: modalIn 0.25s ease forwards;
+}
+.modal-out {
+  animation: modalOut 0.25s ease forwards;
+} /* -------------------------------- */ /* CARDS */ /* -------------------------------- */
+@keyframes tabCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tab-card-in {
+  opacity: 0;
+  animation: tabCardIn 0.45s ease forwards;
+} /* -------------------------------- */ /* MESSAGE */ /* -------------------------------- */
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.message-in {
+  animation: messageIn 0.2s ease forwards;
+} /* -------------------------------- */ /* REVIEW */ /* -------------------------------- */
+@keyframes reviewIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+.review-in {
+  animation: reviewIn 0.3s ease forwards;
+}
+.swiper-slide {
+  will-change: transform;
+}
+.featured-swiper {
+  overflow: visible !important;
+}
+
+.featured-swiper .swiper-wrapper {
+  align-items: center;
+}
+.featured-swiper .swiper-slide {
+  transform: scale(0.72);
+  opacity: 0.45;
+  transform: scale(0.8) !important;
+  filter: grayscale(100%);
+  transition:
+    transform 350ms ease,
+    opacity 350ms ease,
+    filter 350ms ease;
+}
+.featured-swiper .swiper-slide-active {
+  transform: scale(3);
+  opacity: 1;
+  transform: scale(1) !important;
+  filter: grayscale(0%);
+}
+.swiper-pagination {
+  margin-top: 20px;
+  position: relative !important;
+}
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+  background: #8b5cf6 !important;
+  width: 25px !important;
+  border-radius: 25% !important;
+  opacity: 1;
 }
