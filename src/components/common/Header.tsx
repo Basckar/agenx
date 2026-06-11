@@ -21,7 +21,7 @@ export default function Header() {
               <Menu size={32} />
             </button>
           ) : (
-            <div className="h-8 w-8" /> // جای خالی برای جلوگیری از جابه‌جایی
+            <div className="h-8 w-8" />
           )}
         </div>
       </header>

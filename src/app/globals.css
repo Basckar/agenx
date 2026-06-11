@@ -78,7 +78,7 @@ body {
 .btn-glass:hover {
   background-color: rgba(255, 255, 255, 0.15); /* hover:bg-white/15 */
 }
-/* -------------------------------- */ /* MODAL */ /* -------------------------------- */
+/* MODAL */
 @keyframes modalIn {
   from {
     opacity: 0;
@@ -105,7 +105,8 @@ body {
 }
 .modal-out {
   animation: modalOut 0.25s ease forwards;
-} /* -------------------------------- */ /* CARDS */ /* -------------------------------- */
+}
+/* CARDS */
 @keyframes tabCardIn {
   from {
     opacity: 0;
@@ -119,7 +120,8 @@ body {
 .tab-card-in {
   opacity: 0;
   animation: tabCardIn 0.45s ease forwards;
-} /* -------------------------------- */ /* MESSAGE */ /* -------------------------------- */
+}
+/* MESSAGE */
 @keyframes messageIn {
   from {
     opacity: 0;
@@ -132,7 +134,8 @@ body {
 }
 .message-in {
   animation: messageIn 0.2s ease forwards;
-} /* -------------------------------- */ /* REVIEW */ /* -------------------------------- */
+}
+/* REVIEW */
 @keyframes reviewIn {
   from {
     opacity: 0;

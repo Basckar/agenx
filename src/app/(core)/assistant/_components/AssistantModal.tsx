@@ -25,11 +25,7 @@ interface Props {
 export default function AssistantModal({ assistant, onClose }: Props) {
   const Icon = assistant.icon;
 
-  /*
-   -----------------------------------
-   states
-   -----------------------------------
-  */
+  /* states */
 
   const [messages, setMessages] = useState<Message[]>([]);
 
@@ -37,11 +33,7 @@ export default function AssistantModal({ assistant, onClose }: Props) {
 
   const [showReview, setShowReview] = useState(false);
 
-  /*
-   -----------------------------------
-   refs
-   -----------------------------------
-  */
+  /* refs */
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -104,18 +96,12 @@ export default function AssistantModal({ assistant, onClose }: Props) {
       container.removeEventListener("touchend", handleTouchEnd);
     };
   }, [onClose]);
-  /*
-   -----------------------------------
-   send message
-   -----------------------------------
-  */
+  /*  send message   */
 
   const handleSend = () => {
     if (!input.trim()) return;
 
-    /*
-     چت شروع شد
-    */
+    /* start chat */
 
     chatStartedRef.current = true;
 

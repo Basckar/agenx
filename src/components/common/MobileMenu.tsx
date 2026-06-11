@@ -9,9 +9,7 @@ export default function MobileMenu({ open, onClose }: Props) {
     <>
       <div
         onClick={onClose}
-        className={` fixed 
-
-inset-0 z-40 bg-black/50 backdrop-blur-sm transition-all duration-300 ${open ? "opacity-100" : "pointer-events-none opacity-0"} `}
+        className={` fixed  inset-0 z-40 bg-black/50 backdrop-blur-sm transition-all duration-300 ${open ? "opacity-100" : "pointer-events-none opacity-0"} `}
       />
       <aside
         className={` fixed right-0 top-0 z-50 h-screen w-[280px] bg-gray border-l border-white/10 transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"} `}>
