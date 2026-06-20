@@ -11,7 +11,7 @@ export default function ShowcaseSection() {
       </div>
       <div className="  max-w-6xl">
         <div className="relative flex items-center justify-center gap-6 flex-wrap lg:flex-nowrap ">
-          <div className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] backdrop-blur-xl absolute top-0 left-0 h-40 w-70  ">
+          <div className="overflow-hidden rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl absolute top-0 left-0 h-40 w-70  ">
             <img
               src={showcaseItems[0].image}
               alt={showcaseItems[0].title}
@@ -25,7 +25,7 @@ export default function ShowcaseSection() {
               className="h-full w-full"
             />
           </div>
-          <div className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] backdrop-blur-xl absolute top-94 left-0  h-40 w-70  ">
+          <div className="overflow-hidden rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl absolute top-94 left-0  h-40 w-70  ">
             <img
               src={showcaseItems[2].image}
               alt={showcaseItems[2].title}

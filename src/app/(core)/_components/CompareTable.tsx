@@ -4,7 +4,7 @@ import { compareRows } from "@/data/compare";
 export default function CompareTable() {
   return (
     <section className="py-24">
-      <div className=" overflow-hidden rounded-[40px] bg-white/[0.03] backdrop-blur-xl ">
+      <div className=" overflow-hidden rounded-[40px] bg-white/5 backdrop-blur-xl ">
         {/* header */}
         <div className="  grid  grid-cols-3  bg-gradient-to-b from-primary/30  to-transparent text-center ">
           <div className="py-5 font-bold">ویژگی</div>
@@ -32,7 +32,7 @@ export default function CompareTable() {
                   />
                 </div>
               ) : (
-                <div className="bg-states-error rounded-full absolute  h-5 w-5">
+                <div className="bg-states-error2 rounded-full absolute  h-5 w-5">
                   <Icon
                     name="close"
                     className="h-10 w-10 pt-1 relative -top-0.5 left-1"

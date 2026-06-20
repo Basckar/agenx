@@ -66,7 +66,7 @@ export default function AssistantReviewCard({ assistant }: Props) {
           className="h-12 flex-1 rounded-full border border-white bg-white/10 pr-4 text-sm text-white outline-none backdrop-blur-xl placeholder:text-white"
         />
 
-        <button className="h-12 rounded-full border border-white bg-green-700 px-4 text-xl font-bold text-white transition hover:scale-105">
+        <button className="h-12 rounded-full border border-white bg-states-success px-4 text-xl font-bold text-white transition hover:scale-105">
           ثبت
         </button>
       </div>

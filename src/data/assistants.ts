@@ -2,7 +2,7 @@ import { Laptop } from "lucide-react";
 export const assistants = [
   {
     id: 1,
-    title: "سینتکس",
+    title: "ssss",
     description:
       "دستیار آموزش دیده ی شما  برای کدنویسی مسلط به زبان هاب Js ,python, php",
     rating: 3.5,
@@ -17,7 +17,7 @@ export const assistants = [
     description:
       "دستیار آموزش دیده ی شما  برای کدنویسی مسلط به زبان هاب Js ,python, php",
     rating: 3.5,
-    users: 80,
+    users: 70,
     iqLevel: "خبره",
     category: "تکنولوژی",
     icon: Laptop,
@@ -28,7 +28,7 @@ export const assistants = [
     description:
       "دستیار آموزش دیده ی شما  برای کدنویسی مسلط به زبان هاب Js ,python, php",
     rating: 3.5,
-    users: 80,
+    users: 60,
     iqLevel: "خبره",
     category: "طبیعت",
     icon: Laptop,
@@ -72,7 +72,7 @@ export const assistants = [
     description:
       "دستیار آموزش دیده ی شما  برای کدنویسی مسلط به زبان هاب Js ,python, php",
     rating: 3.5,
-    users: 80,
+    users: 22,
     iqLevel: "خبره",
     category: "سرگرمی",
     icon: Laptop,
@@ -83,7 +83,7 @@ export const assistants = [
     description:
       "دستیار آموزش دیده ی شما  برای کدنویسی مسلط به زبان هاب Js ,python, php",
     rating: 3.5,
-    users: 80,
+    users: 12,
     iqLevel: "خبره",
     category: "تکنولوژی",
     icon: Laptop,

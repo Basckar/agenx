@@ -34,6 +34,7 @@ body {
   --color-black: #000;
   --color-gray: #111114;
   --color-states-error: #5b2f2f;
+  --color-states-error2: #b21e1e;
   --color-states-success: #19a409;
   --color-shade-1: #5a01de;
   --color-concession: #ffe355;
@@ -60,6 +61,34 @@ body {
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+/* اسکرول بار برای مرورگرهای WebKit (Chrome, Edge, Safari) */
+.custom-scroll::-webkit-scrollbar {
+  width: 5px; /* نوار باریک */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; /* ترک شفاف */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5); /* نوار سفید نیمه‌شفاف */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8); /* هاور پررنگ‌تر */
+}
+
+/* مخفی کردن فلش‌های بالا و پایین */
+.custom-scroll::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* برای فایرفاکس */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
 .btn-glass {
   display: flex;

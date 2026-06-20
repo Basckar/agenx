@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { Icon } from "@/components/icons/Icon";
 export default function HeroButtons() {
+  interface Props {
+    onOpenAuth: () => void;
+  }
   return (
     <div className="mt-12 flex gap-4">
       <Link href="/assistants" className=" btn-glass !text-xs !px-4">

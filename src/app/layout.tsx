@@ -10,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="bg-[#0b0b0f] text-white">
+      <body className=" bg-[#0b0b0f] text-white text-white">
         <Header />
         {children}
         <Footer />
